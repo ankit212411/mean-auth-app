@@ -33,7 +33,7 @@ const login = async (req, res) => {
         }
         const jwtToken = jwt.sign(
             { email: user.email, _id: user._id },
-            process.env.JWT_SCERET,
+            process.env.VERCEL_JWT_SCERET,
             { expiresIn: '24h' }
         )
         res.status(200)

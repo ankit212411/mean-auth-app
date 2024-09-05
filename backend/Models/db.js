@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongo_url = process.env.MONGODB_URL;
+const mongo_url = process.env.VERCEL_MONGODB_URL;
 
 mongoose.connect(mongo_url)
     .then(() => {

@@ -9,7 +9,7 @@ const AuthRouter = require('./Routes/AuthRouter');
 const ProductRouter = require('./Routes/ProductRouter');
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.VERCEL_PORT || 3000;
 
 
 app.get('/ping', (req, res) => { 

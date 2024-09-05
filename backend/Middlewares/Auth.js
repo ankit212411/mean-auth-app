@@ -6,7 +6,7 @@ const ensureAuthenticated = (req, res, next) => {
         return res.status(401).json({ message: 'Unauthorized' });
     }
     try {
-        const decoded = jwt.verify(auth, process.env.JWT_SCERET);
+        const decoded = jwt.verify(auth, process.env.VERCEL_JWT_SCERET);
         req.user = decoded;
         next();
     } catch (error) {
