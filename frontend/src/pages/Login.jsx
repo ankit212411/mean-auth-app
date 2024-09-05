@@ -21,7 +21,7 @@ const Login = () => {
       return handleError("All fields are required");
     }
     try {
-      const url = `${process.env.REACT_APP_API_URL}/auth/login`;
+      const url = `${import.meta.env.REACT_APP_API_URL}/auth/login`;
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
