@@ -19,7 +19,7 @@ const Home = () => {
     }
     const fetchProducts = async () => {
         try {
-            const url = `${import.meta.env.REACT_APP_API_URL}/products`;
+            const url = `${import.meta.env.VITE_APP_API_URL}/products`;
             const headers = {
                 headers: {
                     authorization: localStorage.getItem('token')

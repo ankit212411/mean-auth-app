@@ -26,7 +26,7 @@ const Signup = () => {
       return handleError("All fields are required");
     }
     try {
-      const url = `${import.meta.env.REACT_APP_API_URL}/auth/signup`;
+      const url = `${import.meta.env.VITE_APP_API_URL}/auth/signup`;
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
