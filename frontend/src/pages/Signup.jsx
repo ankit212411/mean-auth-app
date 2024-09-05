@@ -26,7 +26,7 @@ const Signup = () => {
       return handleError("All fields are required");
     }
     try {
-      const url = "http://localhost:4001/auth/signup";
+      const url = `${process.env.REACT_APP_API_URL}/auth/signup`;
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
