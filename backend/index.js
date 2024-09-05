@@ -19,6 +19,8 @@ app.get('/ping', (req, res) => {
 app.use(bodyParser.json());
 app.use(cors());
 
+app.options('*', cors());
+
 app.use('/auth', AuthRouter);
 app.use('/products', ProductRouter);
 
